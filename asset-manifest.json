@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Mini-Youtube/static/css/main.377b4c6e.css",
+    "main.js": "/Mini-Youtube/static/js/main.1c6c88f4.js",
+    "index.html": "/Mini-Youtube/index.html",
+    "main.377b4c6e.css.map": "/Mini-Youtube/static/css/main.377b4c6e.css.map",
+    "main.1c6c88f4.js.map": "/Mini-Youtube/static/js/main.1c6c88f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.377b4c6e.css",
+    "static/js/main.1c6c88f4.js"
+  ]
+}
