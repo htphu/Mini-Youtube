@@ -30,7 +30,7 @@ const VideoPlayer = ({ videoPlayer }) => {
 
         <div className="videoPlayer">
             <iframe title='videoPlayer' id="player" type="text/html" width="853" height="480"
-                src={"http://www.youtube.com/embed/" + id + "?autoplay=1&fs=1"}
+                src={"https://www.youtube.com/embed/" + id + "?autoplay=1&fs=1"}
                 frameborder="0"></iframe>
             <div className="videoDetails">
                 <div className="videoTitle">{title}</div>
