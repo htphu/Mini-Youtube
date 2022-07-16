@@ -45,13 +45,12 @@ function VerticalListVideo() {
         .then(data=> {return data.json()})
         .then(data=> {
             setListVideo(data.items)
-            console.log(data.items);
         })
     }, [])
 
     return (
         <div className="listVideo">
-            {listVideo.map(video=>(<ListVideoItem video={video}/>))}
+            {listVideo && listVideo.map(video=>(<ListVideoItem video={video}/>))}
 
         </div>
     )

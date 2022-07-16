@@ -37,6 +37,12 @@ const Filter = () => {
             <span className="filter-item" onClick={()=> {getVideosCategory('20')}}>
                 Trò Chơi
             </span>
+            <span className="filter-item" onClick={()=> {getVideosCategory('17')}}>
+                Bóng đá
+            </span>
+            <span className="filter-item" onClick={()=> {getVideosCategory('22')}}>
+                Blogs
+            </span>
         </div>
     )
 }

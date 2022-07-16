@@ -22,7 +22,6 @@ const VideoPlayer = ({ videoPlayer }) => {
         fetch('https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id='+channelId+'&key=AIzaSyDUiIK6Z-UK6YBXKgyXw8Vkn2VAko0PwWk')
         .then(data=> {return data.json()})
         .then(data=> {
-            console.log(data.items[0]);
             setAvtChannel(data.items[0].snippet.thumbnails.default.url)
         })
     }, [id])
@@ -68,8 +67,6 @@ const WatchVideos = () => {
             .then(data => { return data.json() })
             .then(data => {
                 setVideoPlayer(data.items[0])
-                
-                console.log(videoPlayer);
             })
     }, [id])
 

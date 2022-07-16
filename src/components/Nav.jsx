@@ -1,17 +1,16 @@
 import React from 'react'
 import './Nav.scss'
 import { useNavigate } from 'react-router';
-
+import InputSearch from './InputSearch';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SearchIcon from '@mui/icons-material/Search';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+
 import Tooltip from '@mui/material/Tooltip';
 
 
 function Nav() {
     const navigate = useNavigate();
+    
     return (
         <div className="nav">
             <div className="nav-left" onClick={()=>{navigate('/Mini-Youtube')}}>
@@ -26,22 +25,7 @@ function Nav() {
                 </div>
             </div>
             <div className="nav-center">
-                <div className="input">
-                    <div style={{ position: 'relative', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <input type="text" placeholder="Tìm kiếm" />
-                        <KeyboardIcon className="key-board" />
-                    </div>
-                    <Tooltip title="Tìm kiếm">
-                        <div className="input-search" >
-                            <SearchIcon />
-                        </div>
-                    </Tooltip>
-                    <Tooltip title="Tìm kiếm bằng giọng nói">
-                        <div className="input-voice">
-                            <KeyboardVoiceIcon />
-                        </div>
-                    </Tooltip>
-                </div>
+                <InputSearch/>
             </div>
             <div className="nav-right">
                 <Tooltip title="Tải lên">

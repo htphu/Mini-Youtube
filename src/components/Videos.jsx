@@ -16,7 +16,6 @@ const Videos = () => {
             return data.json()
         })
         .then(data => {
-            console.log(data.items);
             dispatch(UPDATE(data.items))
         })
         .catch(err => console.log(err))
