@@ -15,9 +15,9 @@ const Video = ({ videos }) => {
             categoryId
         },
     } = videos
-    const [duration, setDuration] = useState(null)
     const [thumbChannel, setThumbChannel] = useState(null)
     const navigate = useNavigate();
+    const [duration, setDuration] = useState(null)
 
     const second = moment.duration(duration).asSeconds()
     const _duration = moment.utc(second * 1000).format('mm:ss')
