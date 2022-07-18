@@ -12,7 +12,6 @@ const Filter = () => {
             fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=VN&key=AIzaSyDUiIK6Z-UK6YBXKgyXw8Vkn2VAko0PwWk')
                 .then(data=> {return data.json()})
                 .then(data=> {
-                    console.log(data.items);
                     dispatch(FILTER(data.items))
                 })
         }else{
@@ -20,7 +19,6 @@ const Filter = () => {
             fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&videoCategoryId='+key+'&regionCode=VN&key=AIzaSyDUiIK6Z-UK6YBXKgyXw8Vkn2VAko0PwWk')
                 .then(data=> {return data.json()})
                 .then(data=> {
-                    console.log(data.items);
                     dispatch(FILTER(data.items))
                 })
         }

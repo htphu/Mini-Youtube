@@ -68,7 +68,7 @@ function VerticalListVideo() {
 
     return (
         <div className="listVideo">
-            {listVideo && listVideo.map(video=>(<ListVideoItem video={video}/>))}
+            {listVideo && listVideo.map((video,index)=>(<ListVideoItem video={video} key={index}/>))}
 
         </div>
     )
