@@ -11,12 +11,13 @@ const Videos = () => {
     const {videos} = useSelector(state => state.dataVideo)
 
     useEffect(() => {
-        fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=VN&key=AIzaSyDUiIK6Z-UK6YBXKgyXw8Vkn2VAko0PwWk')
+        fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=VN&key='+process.env.REACT_APP_YT_KEY)
         .then(data => {
             return data.json()
         })
         .then(data => {
             dispatch(UPDATE(data.items))
+
         })
         .catch(err => console.log(err))
     }, [])
@@ -25,6 +26,7 @@ const Videos = () => {
         <>
         <div className="videos">
             {videos && videos.map(i =>( <Video videos={i} key={i.id}/>))}
+            
         </div>
         </>
     )
