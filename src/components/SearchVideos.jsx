@@ -11,7 +11,7 @@ const SearchItems = ({video}) => {
             channelId,
             title,
             channelTitle,
-            thumbnails:{medium}
+            thumbnails:{high}
         }
     } = video
     const navigate = useNavigate();
@@ -61,7 +61,7 @@ const SearchItems = ({video}) => {
     return (
         <div className="SearchVideos-item" onClick={()=>{handleClick(videoId)}}>
             <div className="SearchVideos-thumb">
-                <img src={medium.url} alt="thumb" />
+                <img src={high.url} alt="thumb" />
                 <span>{_duration}</span>
             </div>
             <div className="SearchVideos-detail">

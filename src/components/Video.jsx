@@ -11,7 +11,7 @@ const Video = ({ videos }) => {
             channelId,
             channelTitle,
             title,
-            thumbnails: { medium },
+            thumbnails: { high },
             categoryId
         },
     } = videos
@@ -52,7 +52,7 @@ const Video = ({ videos }) => {
     return (
         <div className="videos-item" onClick={handleClick}>
             <div className="thumb">
-                <img src={medium.url} alt='thumb' />
+                <img src={high.url} alt='thumb' />
                 <span className="duration">{_duration}</span>
             </div>
             <div className="bottom">

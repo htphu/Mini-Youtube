@@ -1,5 +1,5 @@
 import './Videos.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { UPDATE } from './redux/reducer/handleVideos'
@@ -17,7 +17,7 @@ const Videos = () => {
         })
         .then(data => {
             dispatch(UPDATE(data.items))
-
+            console.log(data.items);
         })
         .catch(err => console.log(err))
     }, [])
