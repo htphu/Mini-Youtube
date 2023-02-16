@@ -32,7 +32,7 @@ const ListVideoItem = ({video}) => {
                 setDuration(data.items[0].contentDetails.duration)
             })
             .catch(err => console.log(err))
-    }, [id])
+    }, [])
     const handleClick =()=>{
         navigate('/Mini-Youtube/watch/'+id+'/'+categoryId)
     }
@@ -64,7 +64,7 @@ function VerticalListVideo() {
         .then(data=> {
             setListVideo(data.items)
         })
-    }, [])
+    }, [categoryId])
 
     return (
         <div className="listVideo">

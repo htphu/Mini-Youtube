@@ -5,22 +5,27 @@ import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router';
 
 const InputSearch = () => {
-    const [searchValue, setSearchValue] = useState('')
+    const [searchValue, setSearchValue] = useState('');
+    const [hiddenSearchInput, setHiddenSearchInput] = useState(true);
+
     const navigate =useNavigate()
-    const handleSearch=()=>{
+    const handleClickButtonSearch=()=>{
         if(!searchValue.trim()){
+            setHiddenSearchInput(prev=>{return !prev});
             return
         }
-        navigate('/Mini-Youtube/Search/'+searchValue)
+        navigate('/Mini-Youtube/Search/'+searchValue);
+        setSearchValue("");
+        setHiddenSearchInput(prev=>{return !prev});
     }
     return (
-        <div className="input">
+        <div className={hiddenSearchInput ? "input hiddenSearchInput" : "input"}>
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                 <input type="text" placeholder="Tìm kiếm" value={searchValue} onChange={(e)=>{setSearchValue(e.target.value)}}  />
                 {searchValue && <CloseIcon className="close" onClick={()=>{ setSearchValue('') }}/>}
             </div>
             <Tooltip title="Tìm kiếm">
-                <div className="input-search" onClick={()=>{handleSearch()}}>
+                <div className="input-search" onClick={()=>{handleClickButtonSearch()}}>
                     <SearchIcon />
                 </div>
             </Tooltip>

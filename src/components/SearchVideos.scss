@@ -1,10 +1,8 @@
 .SearchVideos{
     background-color: #181818;
     min-height: 100vh;
-    padding-top: calc(56px + 10px);
-    padding-left: calc(240px + 10px);
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding: 20px;
+    padding-top: calc(56px + 20px);
     &-item{
         display: flex;
         flex-direction: row;

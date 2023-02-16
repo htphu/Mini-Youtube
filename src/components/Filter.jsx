@@ -26,21 +26,21 @@ const Filter = () => {
     
     return (
         <div className="filter">
-            <span className="filter-item" onClick={()=> {getVideosCategory('all')}}>
-                Tất cả
-            </span>
-            <span className="filter-item" onClick={()=> {getVideosCategory('10')}}>
-                Âm nhạc
-            </span>
-            <span className="filter-item" onClick={()=> {getVideosCategory('20')}}>
-                Trò Chơi
-            </span>
-            <span className="filter-item" onClick={()=> {getVideosCategory('17')}}>
-                Bóng đá
-            </span>
-            <span className="filter-item" onClick={()=> {getVideosCategory('22')}}>
-                Blogs
-            </span>
+                <span className="filter-item" onClick={()=> {getVideosCategory('all')}}>
+                    Tất cả
+                </span>
+                <span className="filter-item" onClick={()=> {getVideosCategory('10')}}>
+                    Âm nhạc
+                </span>
+                <span className="filter-item" onClick={()=> {getVideosCategory('20')}}>
+                    Trò Chơi
+                </span>
+                <span className="filter-item" onClick={()=> {getVideosCategory('17')}}>
+                    Bóng đá
+                </span>
+                <span className="filter-item" onClick={()=> {getVideosCategory('22')}}>
+                    Blogs
+                </span>
         </div>
     )
 }

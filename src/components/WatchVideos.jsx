@@ -1,7 +1,6 @@
 import './WatchVideos.scss'
 import React from 'react'
 import VerticalListVideo from './VerticalListVideo';
-
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ShareIcon from '@mui/icons-material/Share';
@@ -28,7 +27,7 @@ const VideoPlayer = ({ videoPlayer }) => {
     return (
 
         <div className="videoPlayer">
-            <iframe title='videoPlayer' id="player" type="text/html" width="853" height="480"
+            <iframe title='videoPlayer' id="player" type="text/html" width="100%" height="360px"
                 src={"https://www.youtube.com/embed/" + id + "?autoplay=1&fs=1"}
                 
                 frameborder="0" 
@@ -57,7 +56,7 @@ const VideoPlayer = ({ videoPlayer }) => {
                         </div>
                     </div>
 
-                    <div className="btnSup">
+                    <div className="btnSub">
                         ĐĂNG KÝ
                     </div>
                 </div>

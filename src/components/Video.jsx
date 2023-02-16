@@ -32,7 +32,8 @@ const Video = ({ videos }) => {
                 setDuration(data.items[0].contentDetails.duration)
             })
             .catch(err => console.log(err))
-    }, [id])
+
+    }, [])
     useEffect(() => {
         //get hinh dai dien channel
         fetch('https://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=' + channelId + '&regionCode=VN&key=AIzaSyDUiIK6Z-UK6YBXKgyXw8Vkn2VAko0PwWk')
@@ -43,7 +44,8 @@ const Video = ({ videos }) => {
                 setThumbChannel(data.items[0].snippet.thumbnails.default.url)
             })
             .catch(err => console.log(err))
-    }, [channelId])
+
+    }, [])
 
     const handleClick =()=>{
         navigate('/Mini-Youtube/watch/'+id+'/'+categoryId)

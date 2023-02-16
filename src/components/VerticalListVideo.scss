@@ -1,9 +1,10 @@
 .listVideo{
-    width: 402px;
+
     display: flex;
     flex-direction: column;
     gap: 10px 0;
     &-item{
+        width: 100%;
         cursor: pointer;
         &:hover{
 

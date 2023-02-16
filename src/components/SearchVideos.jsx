@@ -1,6 +1,5 @@
 import './SearchVideos.scss'
 import React, {useEffect, useState} from 'react'
-import SideBar from './SideBar'
 import { useParams, useNavigate } from 'react-router'
 import moment from 'moment';
 
@@ -90,8 +89,6 @@ const SearchVideos = () => {
     }, [q])
     return (
         <div className="SearchVideos">
-            <SideBar />
-
             {resultSearch && resultSearch.map((video,index)=><SearchItems video={video} key={index}/>)}
         </div>
     )
